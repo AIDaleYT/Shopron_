@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopron - Your Online Store</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .product-price {
+    color: #f39c12;
+    font-size: 1.1rem;
+  }
+
+  button {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #e67e22;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Shopron</h1>
+    <p>Your Online Store for Fancy and Colorful Gadgets</p>
+  </header>
+  <div class="container">
+    <!-- Repeat this block for each product -->
+    <div class="product">
+      <img src="data:image/jpeg;base64,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" alt="Product 1">
+      <h2 class="product-title">White Wireless Headset</h2>
+      <p class="product-price">$29.99</p>
+      <button>Add to Cart</button>
+    <!-- Repeat more product blocks here -->
+  </div>
+</body>
+</html>
